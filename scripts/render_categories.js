@@ -31,7 +31,13 @@ let categories = [
  *      HINT: Use the toUpperCase() function.
  *      TRIVIA: Why is it called UPPERCASE? 
  *      Answer: https://bit.ly/3gOwrga
- */
+ */    
 function renderCategories() {
-    // Add code here
+    for(let y of categories){
+       let htmlString = "<div class='category'><div class='category-cell'>" +y.toUpperCase() + "</div></div>";
+         $("#categories").append(htmlString);
+    }
 }
+
+
+
