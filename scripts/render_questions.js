@@ -1,6 +1,6 @@
 let numCategories = categories.length;
 let questionValues = [100, 200, 300, 400, 500];
-
+let x;
 /* TODO: Program the following:
  *  Print a column of questions for each category.
  *
@@ -13,7 +13,7 @@ let questionValues = [100, 200, 300, 400, 500];
  *      Need more help? Check out https://mzl.la/3lDHxIq or ask a volunteer.
  *
  * 3. Create an HTML string for each question. It should look like this:
- *      <div class='question'><div class='question-cell'>VALUE</div></div>
+ *      <div class='question-column'><div class='question-cell'>VALUE</div></div>
  *
  * 4. Replace VALUE in each string with the question's value.
  *      For example, the $500 question would be:
@@ -35,5 +35,17 @@ let questionValues = [100, 200, 300, 400, 500];
  *      Need more help? Check out https://bit.ly/2EIsD3b or ask a volunteer.
  */
 function renderQuestions() {
-  // Add code here
+  for (let i = 0; i < numCategories; i++) {
+    let htmlString = "<div class='question-column'>";
+
+    for (x of questionValues) {
+      // $("#questions").append(
+      //   "<div class='question-column'><div class='question-cell' data-category='"+ i +
+      //   x +
+      //   "'</div>"
+      // );
+    }
+    //htmlString = htmlString + "</div>"
+    // $("#questions").append(htmlSring);
+  }
 }
