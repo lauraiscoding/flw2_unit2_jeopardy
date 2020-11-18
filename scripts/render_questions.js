@@ -1,6 +1,5 @@
-let numCategories = categories.length;
+let numCategories = 6;
 let questionValues = [100, 200, 300, 400, 500];
-let x;
 /* TODO: Program the following:
  *  Print a column of questions for each category.
  *
@@ -33,19 +32,24 @@ let x;
  *          <div class='question-cell' data-category='1'>VALUE</div>
  *      HINT: Use the + operator on a string and a variable to join them!
  *      Need more help? Check out https://bit.ly/2EIsD3b or ask a volunteer.
+ * 
+ * let myPet = 'seahorse';
+   console.log(`My favorite animal is the ${myPet}.`);
  */
 function renderQuestions() {
   for (let i = 0; i < numCategories; i++) {
-    let htmlString = "<div class='question-column'>";
+    let htmlString = "<div class='questions-column'>";
 
-    for (x of questionValues) {
-      // $("#questions").append(
-      //   "<div class='question-column'><div class='question-cell' data-category='"+ i +
-      //   x +
-      //   "'</div>"
-      // );
+    for (let category of questionValues) {
+      
+htmlString = htmlString + `<div class='question-cell' data-category='${i}'>` +
+        category +
+         "</div>"
+        
+
     }
-    //htmlString = htmlString + "</div>"
-    // $("#questions").append(htmlSring);
+    htmlString = htmlString + "</div>"
+     $("#questions").append(htmlString);
   }
 }
+renderQuestions();
