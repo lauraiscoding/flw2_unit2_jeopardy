@@ -1,4 +1,4 @@
-let numCategories = 6;
+let numCategories = categories.length;
 let questionValues = [100, 200, 300, 400, 500];
 /* TODO: Program the following:
  *  Print a column of questions for each category.
@@ -41,15 +41,14 @@ function renderQuestions() {
     let htmlString = "<div class='questions-column'>";
 
     for (let category of questionValues) {
-      
-htmlString = htmlString + `<div class='question-cell' data-category='${i}'>` +
-        category +
-         "</div>"
-        
-
+      htmlString =
+        htmlString +
+        `<div class='question-cell' data-category='${i}'>` +
+        `$${category}` +
+        "</div>";
     }
-    htmlString = htmlString + "</div>"
-     $("#questions").append(htmlString);
+    htmlString = htmlString + "</div>";
+    $("#questions").append(htmlString);
   }
 }
-renderQuestions();
+
