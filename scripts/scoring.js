@@ -16,8 +16,16 @@
  */
 
 function renderScoringButtons() {
-    // Add code here
+  $("#score").show();
+  let currentScore = $("#score").val();
+    $("#correct-button").click(function(){
+       addToScore();
+       });
+    $("#incorrect-button").click(function(){
+        subtractFromScore();
+      });
 }
+
 
 /* TODO: Program the following:
  *  Update the score.
@@ -37,10 +45,12 @@ function renderScoringButtons() {
  * BONUS 2: Move the common code from addToScore and subtractFromScore to a helper function!
  *      HINT: Compute the new score and then call the helper function.
 */
-function subtractFromScore() {
-    // Add code here
+function subtractFromScore(questionValue) {
+     let NewScore = currentScore - questionValue;
+     return NewScore;
 }
 
-function addToScore() {
-    // Add code here
+function addToScore(questionValue) {
+   let newScore = currentScore + questionValue;
+   return newScore;
 }
